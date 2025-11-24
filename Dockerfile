@@ -16,4 +16,4 @@ COPY . .
 EXPOSE 5000
 
 # Comando para rodar o servidor em produção com Gunicorn
-CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "viewer:app"]
+CMD ["gunicorn", "-w", "4", "-b", "0.0.0.0:5000", "app:app"]
