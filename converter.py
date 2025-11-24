@@ -30,7 +30,6 @@ def create_html(slide_name, width, height):
         #openseadragon1 {{ width: 100vw; height: 100vh; }}
         
         .top-bar {{
-            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
