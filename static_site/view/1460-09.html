@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>../tiles/1460-09</title>
+    <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+    <style>
+        body { margin: 0; background-color: #000; color: white; font-family: sans-serif; }
+        #openseadragon1 { width: 100vw; height: 100vh; }
+        .back-btn { position: absolute; top: 10px; left: 10px; z-index: 100; background: white; color: black; padding: 10px; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">Voltar</a>
+    <div id="openseadragon1"></div>
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+            tileSources: "../tiles/1460-09.dzi"
+        });
+    </script>
+</body>
+</html>
+    

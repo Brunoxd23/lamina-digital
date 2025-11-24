@@ -12,7 +12,7 @@ env/
 dist/
 build/
 *.spec
-static_site/
+
 
 *.pyc
 .DS_Store
