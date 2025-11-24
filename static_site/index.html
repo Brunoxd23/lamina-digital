@@ -3,21 +3,111 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Laminário Digital</title>
+    <title>Laminário Digital - Einstein</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; padding: 20px; background: #f0f0f0; }
-        h1 { color: #333; }
-        ul { list-style: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #0070f3; font-size: 1.2em; }
-        a:hover { text-decoration: underline; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0;
+            padding: 0;
+            background: #f5f7fa;
+            color: #333;
+        }
+        
+        header {
+            background: #fff;
+            padding: 20px 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0070f3;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            text-decoration: none;
+            color: inherit;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            border: 1px solid #eaeaea;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0,0,0,0.08);
+            border-color: #0070f3;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: #e6f1ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0070f3;
+            font-size: 24px;
+        }
+
+        .card-content h2 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .card-content p {
+            margin: 5px 0 0;
+            font-size: 0.9rem;
+            color: #666;
+        }
     </style>
 </head>
 <body>
-    <h1>Laminário Digital - Einstein</h1>
-    <ul>
-        <li><a href="view/1460-09.html">1460-09</a></li>
-    </ul>
+    <header>
+        <i class="fas fa-dna" style="font-size: 24px; color: #0070f3;"></i>
+        <h1>Laminário Digital - Einstein</h1>
+    </header>
+    <div class="container">
+        <div class="grid">
+            
+        <a href="view/1460-09.html" class="card">
+            <div class="card-icon">
+                <i class="fas fa-microscope"></i>
+            </div>
+            <div class="card-content">
+                <h2>1460-09</h2>
+                <p>Visualizar lâmina digital</p>
+            </div>
+        </a>
+        
+        </div>
+    </div>
 </body>
 </html>
     
