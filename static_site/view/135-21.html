@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>135-21</title>
+    <script src="https://openseadragon.github.io/openseadragon/openseadragon.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { margin: 0; background-color: #000; color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; }
+        #openseadragon1 { width: 100vw; height: 100vh; }
+        
+        .top-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
+
+        .title {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #fff;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: #0070f3;
+            border-color: #0070f3;
+        }
+        
+        .btn-primary:hover {
+            background: #0060df;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="title">135-21</div>
+        <div class="controls">
+            <button id="rotate-btn" class="btn" onclick="rotateViewer()">
+                <i class="fas fa-rotate-right"></i> Rotacionar
+            </button>
+            <a href="../index.html" class="btn btn-primary">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+        </div>
+    </div>
+    
+    <div id="openseadragon1"></div>
+    
+    <script type="text/javascript">
+        var viewer = OpenSeadragon({
+            id: "openseadragon1",
+            prefixUrl: "https://openseadragon.github.io/openseadragon/images/",
+            tileSources: "../tiles/135-21.dzi",
+            showNavigator: true,
+            navigatorPosition: "BOTTOM_RIGHT",
+            showRotationControl: true,
+            gestureSettingsMouse: {
+                clickToZoom: false
+            }
+        });
+
+        function rotateViewer() {
+            var currentRotation = viewer.viewport.getRotation();
+            viewer.viewport.setRotation(currentRotation + 90);
+        }
+    </script>
+</body>
+</html>
+    
