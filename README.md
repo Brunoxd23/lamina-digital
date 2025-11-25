@@ -48,11 +48,27 @@ Abra no navegador: http://localhost:5000
 - Alterar `TILE_SIZE` e `QUALITY` em `viewer.py` conforme desempenho.
 - Usar `limit_bounds=True` no `DeepZoomGenerator` para evitar áreas vazias se necessário.
 
-## 6. Alternativas
+## 6. Deploy Estático (GitHub Pages)
 
-- **QuPath**: solução completa para anotação e análise.
-- **ASAP**: visualizador/anotador de pesquisa.
-- **PyVIPS**: extrações mais rápidas para processamento em lote.
+Devido à grande quantidade de arquivos gerados (tiles), o deploy no Vercel pode falhar (limite de arquivos). Recomenda-se usar o **GitHub Pages**.
+
+### Como ativar o GitHub Pages:
+
+1. Vá para o seu repositório no GitHub.
+2. Clique em **Settings** (Configurações).
+3. No menu lateral esquerdo, clique em **Pages**.
+4. Em **Build and deployment** > **Source**, selecione **Deploy from a branch**.
+5. Em **Branch**, selecione `main` e a pasta `/static_site` (se disponível) ou `/` (root).
+   - **Nota**: Como o site estático está na pasta `static_site`, você precisará configurar o GitHub Pages para servir a partir dessa pasta.
+   - Se o GitHub Pages não permitir selecionar subpastas além de `/` ou `/docs`, você pode precisar mover o conteúdo de `static_site` para a raiz ou usar uma GitHub Action.
+
+### Opção Recomendada (GitHub Action para Pages):
+
+Se não conseguir selecionar a pasta `static_site` diretamente:
+
+1. Vá em **Actions** no GitHub.
+2. Procure por "Static HTML" e configure.
+3. Certifique-se de que o passo de upload aponte para a pasta `static_site`.
 
 ## 7. Problemas Comuns
 
